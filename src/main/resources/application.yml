@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev, base-addi # 기본적으로 비활성화 되는 녀석
+  thymeleaf:
+    cache: false
+    prefix: file:src/main/resources/templates/
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  datasource:
+    url: jdbc:mariadb://127.0.0.1:3306/app10?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
+    username: root
+    password:
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+custom: # 설정 파일을 커스텀 할 수 있음. 이름은 크게 상관없다
+  genFileDirPath: c:/test/app10 # 내가 업로드 한 파일을 저장할 경로 / 없으면 폴더 만들어야 함
