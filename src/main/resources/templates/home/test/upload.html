@@ -1,0 +1,14 @@
+<h1>파일 업로드 테스트</h1>
+
+<!-- 폼으로 파일 업로드 시 필수 : method="POST" enctype="multipart/form-data" -->
+<!-- th 빨간색으로 뜨는 경우 file- settiongs - inspections 검색 - XML에서 Unbound namespace prefix 체크 해제 -->
+<form th:action="@{/upload}" method="POST" enctype="multipart/form-data">
+  <div>
+    <span>파일 1</span>
+    <input type="file" name="img1" accept="image/png, image/gif, image/jpeg">
+  </div>
+  <div>
+    <span>업로드</span>
+    <input type="submit" value="전송">
+  </div>
+</form>
